@@ -1,5 +1,11 @@
 .mt-top-logo{
-    border:1px solid black;
-    height: 300px;
+    border:0px solid black;
+    height: 171px;
+    width: 380px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../assets/imgs/logo.jpg') no-repeat;
     
 }   

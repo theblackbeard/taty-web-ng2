@@ -1,0 +1,21 @@
+.navbar{
+    background: #fff;
+    border: 0;
+}
+
+#navbar{
+    width: auto;
+    display: table;
+    border: 0px solid red;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+}
+
+.navbar li a{
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    
+    
+}

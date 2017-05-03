@@ -1,3 +1,9 @@
 <p>
   portfolio works!
 </p>
+
+
+<a [routerLink]="['new']">Novo Trabalho</a>
+<ul>
+  <li *ngFor="let work of works" ><a href="{{work.slug}}">{{work.title}}</a></li>
+</ul>  
