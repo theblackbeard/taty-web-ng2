@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
 
    $("li").hover(function(){
        $(this).addClass("wBorder");
@@ -6,6 +6,13 @@ $(document).ready(function(){
        $(this).removeClass("wBorder");
    })     
 
-
+   // init Masonry
+   var $grid = $('.grid').masonry({
+       // options...
+   });
+   // layout Masonry after each image loads
+   $grid.imagesLoaded().progress(function () {
+       $grid.masonry('layout');
+   });
 
 })

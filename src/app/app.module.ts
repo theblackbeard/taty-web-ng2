@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+﻿import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -7,12 +7,13 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { WorksService } from './services/works.service';
+import { HelperService } from './services/helper.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-
-import { WorksService } from './services/works.service';
 import { HeaderComponent } from './components/header/header.component';
 import { PortfolioAddComponent } from './components/portfolio-add/portfolio-add.component';
 import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
@@ -59,7 +60,7 @@ export const firebaseConfig = {
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [WorksService],
+  providers: [WorksService, HelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

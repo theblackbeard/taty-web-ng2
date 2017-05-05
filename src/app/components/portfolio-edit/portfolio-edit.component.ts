@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { WorksService } from '../../services/works.service';
+import { HelperService } from '../../services/helper.service';
 import { Router, ActivatedRoute, Params} from '@angular/router';
 
 @Component({
@@ -13,9 +14,10 @@ export class PortfolioEditComponent implements OnInit {
   title: any;
   
   constructor(
-    private ws: WorksService, 
-    private router: Router, 
-    private route: ActivatedRoute) { }
+      private ws: WorksService,
+      private helper: HelperService,
+      private router: Router, 
+      private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
@@ -28,37 +30,10 @@ export class PortfolioEditComponent implements OnInit {
   onUpdateSubmit(){
     let work = {
       title: this.title,
-      slug: this.getSlugTitle(this.title)
+      slug: this.helper.getSlug(this.title)
     }
     this.ws.updateWork(this.id, work);
     this.router.navigate(['/works']);
-
-}
-
-  private getSlugTitle(title){
-    let map = {
-      a : /[\xE0-\xE6]/g,
-      e : /[\xE8-\xEB]/g,
-      i : /[\xEC-\xEF]/g,
-      o : /[\xF2-\xF6]/g,
-      u : /[\xF9-\xFC]/g,
-      c : /\xE7/g,
-      n : /\xF1/g,
-      A : /[\xC0-\xC6]/g,
-      E : /[\xC8-\xCB]/g,
-      I : /[\xCC-\xCF]/g,
-      O : /[\xD2-\xD6]/g,
-      U : /[\xD9-\xDC]/g,
-      C : /\xC7/g,
-      N : /\xD1/g,
-      '-' : /\s/g,
-    };
-
-    for(let letter in map){
-      let er = map[letter];
-      title = title.replace(er, letter);
     }
-    return title.toLowerCase().trim();  
-  }
 
 }
