@@ -1,0 +1,14 @@
+.mt-body-header {
+    margin: 0px 100px 50px 100px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    border-bottom: 4px solid #ef5c6e;
+    
+}
+.mt-body-header h1{
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #3f4f5e;
+}

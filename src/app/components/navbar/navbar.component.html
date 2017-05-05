@@ -1,11 +1,12 @@
  <nav class="navbar navbar-inverse">
       
         <div id="navbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a [routerLink]="['/']">Home</a></li>
-            <li><a [routerLink]="['/works']">Portfólio</a></li>
-            <li><a>Login</a></li>
+          <ul class="nav navbar-nav ">
+            <li id="menu"><a [routerLink]="['/']">Home</a></li>
+            <li id="menu"><a [routerLink]="['/works']">Portfólio</a></li>
+            <li id="menu" *ngIf="!(user | async)"><a (click)="login()">Login</a></li>
+            <li id="menu" *ngIf="(user | async)"><a (click)="logout()">Sair</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
  
     </nav>

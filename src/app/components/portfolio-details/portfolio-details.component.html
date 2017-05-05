@@ -1,0 +1,6 @@
+<div *ngFor="let w of work">
+  <h1>{{w.title}}</h1>
+
+    <button (click)="onDelete()">Remover</button>
+    <a [routerLink]="['/work/edit/' + w.$key]">Editar</a>
+</div>

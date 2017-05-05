@@ -4,18 +4,44 @@
 }
 
 #navbar{
-    width: auto;
     display: table;
-    border: 0px solid red;
     margin-left: auto !important;
     margin-right: auto !important;
     padding: 0 !important;
+    height: 50px;
 }
 
+#navbar li{
+    margin-left: 10px !important;
+    margin-right:10px !important;
+}
 .navbar li a{
-    background: #fff;
-    color: #000;
+    color: #3f4f5e;
     text-transform: uppercase;
+    font-size: 16px;
+    height: 35px;
+    background: #fff;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 1px !important;
+    margin-right:1px !important;
+    border: 0px solid red;
+    cursor: pointer;
     
     
+}
+
+.wBorder{
+    border-bottom: 3px solid #ef5c6e;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left:  0px;
+    margin-right: 0px;
+
+    
+}
+
+.nBorder{
+    border-bottom: 0px solid black;
 }

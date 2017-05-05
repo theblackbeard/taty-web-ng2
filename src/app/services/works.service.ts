@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database'
 import * as firebase from 'firebase';
 
@@ -6,26 +8,63 @@ import * as firebase from 'firebase';
 export class WorksService {
 
   works: FirebaseListObservable<any[]>;
-  work: FirebaseObjectObservable<any>;
+  work: FirebaseListObservable<any[]>;
+  workOnly: FirebaseObjectObservable<any>;
 
-  constructor(private db: AngularFireDatabase) {
+  
+  constructor(private db: AngularFireDatabase, private http: Http) {
       this.works = this.db.list('/works') as FirebaseListObservable<Works[]>;
+  }
+
+  getWorks(){
+      const query = this.db.list('/works') as FirebaseListObservable<Works>;
+      return this.works = query;
+    /*
+      let ref = firebase.database().ref('/works');
+      ref.orderByChild('slug').equalTo('nova-prime').on('child_added', function(data){
+        this.work = data.val()
+        return this.work;
+      })*/
+
+  }
+
+
+   getWork(slug){
+      const query = this.db.list('/works', {
+       query: {
+          orderByChild: 'slug',
+          equalTo: slug
+        }
+      }) as FirebaseListObservable<Works>;
+      return this.work = query;
+
+  }  
+    
+  getWorkById(id){
+    this.workOnly = this.db.object('/works/' +id) as FirebaseObjectObservable<Works>;
+    return this.workOnly;
+  }  
+
+
+   saveWork(work){
+         return this.works.push(work);
+  
+  
    }
 
-   getWorks(){
-     return this.works;
+   updateWork(id, work){
+      return this.works.update(id, work);
    }
 
 
-   saveWorks(work){
-     // let ref = firebase.database().ref('/works');
-      //return ref.push(work);
+   removeWork(id){
+     return this.works.remove(id);
    }
 }
 
 interface Works{
   $key?:string;
   title?:string;
-  slug?:string
+  slug?:string;
 }
 

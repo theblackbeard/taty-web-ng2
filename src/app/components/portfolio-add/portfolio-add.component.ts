@@ -22,7 +22,7 @@ export class PortfolioAddComponent implements OnInit {
         slug: this.getSlugTitle(this.title)
       }
 
-      this.ws.saveWorks(work);
+      this.ws.saveWork(work);
       this.router.navigate(['/works']);
     
   }
@@ -43,7 +43,6 @@ export class PortfolioAddComponent implements OnInit {
       U : /[\xD9-\xDC]/g,
       C : /\xC7/g,
       N : /\xD1/g,
-      '+' : /[\xE8-\xEB&(?!amp;)]/g,
       '-' : /\s/g,
     };
 
