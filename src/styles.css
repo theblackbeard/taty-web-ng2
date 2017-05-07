@@ -1,5 +1,27 @@
 ﻿/* You can add global styles to this file, and also import other style files */
+html{
+  
+}
 
-.mtBorda{
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.mtBorder{
   border: 1px solid red;
+}
+
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(255,255,255); /* Fallback color */
+    background-color: rgba(255,255,255,0.6); /* Black w/ opacity */
+    
 }

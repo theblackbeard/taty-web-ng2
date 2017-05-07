@@ -2,10 +2,10 @@
       
         <div id="navbar">
           <ul class="nav navbar-nav ">
-            <li id="menu"><a [routerLink]="['/']">Home</a></li>
-            <li id="menu"><a [routerLink]="['/works']">Portfólio</a></li>
-            <li id="menu" *ngIf="!(user | async)"><a (click)="login()">Login</a></li>
-            <li id="menu" *ngIf="(user | async)"><a (click)="logout()">Sair</a></li>
+            <li id="menu"><a [routerLink]="['/']" class="mtAnim">Home</a></li>
+            <li id="menu"><a [routerLink]="['/works']" class="mtAnim">Portfólio</a></li>
+            <li id="menu" *ngIf="!(user | async)"><a (click)="login()" class="mtAnim">Login</a></li>
+            <li id="menu" *ngIf="(user | async)"><a (click)="logout()" class="mtAnim">Sair</a></li>
           </ul>
         </div>
  

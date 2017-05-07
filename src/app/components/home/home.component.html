@@ -1,17 +1,42 @@
-﻿<section class="container">
-  <div class="mt-header">
-    <h1>Ultimos Trabalhos</h1>
-  </div>
-   
-  <div class="mt-body-body">
+﻿<section class="mt-showcase">
+  <div class="container mt-body-body">
     <div class="grid">
-      <div class="grid-item"><img src="http://placehold.it/285x250"></div>
-      <div class="grid-item"><img src="http://placehold.it/285x180"></div>
-      <div class="grid-item"><img src="http://placehold.it/285x180"></div>
-      <div class="grid-item"><img src="http://placehold.it/285x180"></div>
-      <div class="grid-item"><img src="http://placehold.it/285x500"></div>
-      <div class="grid-item"><img src="http://placehold.it/285x180"></div>
-      <div class="grid-item"><img src="http://placehold.it/285x180"></div>
+      <div class="grid-item">
+        <img src="http://placehold.it/342x340" class="t">
+        <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  
+      </div>
+       <div class="grid-item"><img src="../../../assets/imgs/a.jpg"> <div class="grid-item-text">
+            <h2><a href="#">Living Room</a></h2>
+        </div>  </div>
+       <div class="grid-item"><img src="http://placehold.it/340x340"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+        <div class="grid-item"><img src="http://placehold.it/340x340"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+         <div class="grid-item"><img src="http://placehold.it/340x340"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+          <div class="grid-item grid-item--heigth2"><img src="http://placehold.it/340x500"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+             <div class="grid-item"><img src="http://placehold.it/340x340"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+               <div class="grid-item"><img src="http://placehold.it/340x340"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+               <div class="grid-item"><img src="http://placehold.it/340x340"> <div class="grid-item-text">
+            <h2>Titulo</h2>
+        </div>  </div>
+      <!--<div class="grid-item"><img src="http://placehold.it/300x180"></div>
+      <div class="grid-item"><img src="http://placehold.it/290x180"></div>
+      <div class="grid-item"><img src="http://placehold.it/320x180"></div>
+      <div class="grid-item"><img src="http://placehold.it/280x500"></div>
+      <div class="grid-item"><img src="http://placehold.it/280x180"></div>
+      <div class="grid-item"><img src="http://placehold.it/280x180"></div>-->
     </div>
   </div>
 </section>
@@ -28,40 +53,41 @@
 </section>
 <section class="mt-contato">
   <div class="container">
-    <div class="mt-header barra--2 mt-header--2">
+     
+    <div class="mt-header barra--3 mt-header--2">
       <h1>Contato</h1>
     </div>
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis metus non metus mattis hendrerit.  </p>
-    <div class="row">
-      <div class="col-md-5 col-md-offset-2">
-        <form>
-          <div class="form-group">
-            <label for="name">Seu Nome</label>
-            <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
-          </div>
-          <div class="form-group">
-            <label for="email">Seu E-mail</label>
-            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-          </div>
-          <div class="form-group">
-            <label for="subject">Assunto</label>
-            <input type="text" class="form-control" id="subject" placeholder="Digite o assunto">
-          </div>
-          <div class="form-group">
-            <label for="phone">Tel.:</label>
-            <input type="text" class="form-control" id="phone" placeholder="Digite o seu telefone">
-          </div>
-          <div class="form-group">
-            <label for="body">Assunto</label>
-            <textarea class="form-control" id="body" placeholder="Digite a mensagem"></textarea>
-          </div>
+    
+    <div class="row mt-contato-form">
+      <div class="modal" id="mt-wait">
+          <img src="../../../assets/imgs/loading.gif">
+      </div>
+    <form id="submitEmail">
+      <div class="col-md-6">
+       
+          <label>
+            <input type="text" id="name" name="name" required>
+            <div class="mt-contato-form-label-text">Seu Nome</div>
+          </label>
 
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+          <label>
+            <input type="text" id="email" name="_replyto" required>
+            <div class="mt-contato-form-label-text" >Seu E-mail</div>
+          </label>  
       </div>
-      <div class="col-md-5">
-        ss
+      <div class="col-md6">
+        <label>
+            <textarea id="body" name="message" required></textarea>
+            <div class="mt-contato-form-label-text--2">Assunto</div>
+        </label>
       </div>
+      <div class="col-md12">
+        <button type="submit">Enviar</button> 
+        <div class="mt-errors" id="mt-errors"></div>
+      </div>
+       
+      </form>
     </div>
   
   </div>
