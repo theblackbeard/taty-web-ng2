@@ -12,7 +12,7 @@ body{
   border: 1px solid red;
 }
 
-.modal{
+.mt-modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -24,4 +24,48 @@ body{
     background-color: rgb(255,255,255); /* Fallback color */
     background-color: rgba(255,255,255,0.6); /* Black w/ opacity */
     
+}
+
+
+.mt-header {
+    margin: 0px 100px 0px 100px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border-bottom: 4px solid #ef5c6e;
+    
+}
+
+.barra--2 {
+  border-bottom: 4px solid #fff;
+}
+
+.barra--3{
+  border-bottom: 4px solid #F2E4CA;
+}
+
+.mt-header h1{
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #3f4f5e;
+}
+
+.mt-header--2 h1 {
+  text-align: left;
+  font-weight: bolder;
+  color: #F2E4CA;
+  
+}
+
+
+.mt-header--d h1 {
+  text-align: right;
+  color: #fff;
+}
+
+.mt-controllers{
+  width: 70%;
+  margin: 0 auto;
+  margin: 30px auto 0 auto;
 }

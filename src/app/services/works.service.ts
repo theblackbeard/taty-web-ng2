@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database'
 import * as firebase from 'firebase';
 
@@ -10,26 +9,19 @@ export class WorksService {
   works: FirebaseListObservable<any[]>;
   work: FirebaseListObservable<any[]>;
   workOnly: FirebaseObjectObservable<any>;
-
   
   constructor(private db: AngularFireDatabase, private http: Http) {
       this.works = this.db.list('/works') as FirebaseListObservable<Works[]>;
   }
 
   getWorks(){
-      const query = this.db.list('/works') as FirebaseListObservable<Works>;
-      return this.works = query;
-    /*
-      let ref = firebase.database().ref('/works');
-      ref.orderByChild('slug').equalTo('nova-prime').on('child_added', function(data){
-        this.work = data.val()
-        return this.work;
-      })*/
+      return this.works;
 
   }
 
 
-   getWork(slug){
+   getWork(slug) {
+    
       const query = this.db.list('/works', {
        query: {
           orderByChild: 'slug',

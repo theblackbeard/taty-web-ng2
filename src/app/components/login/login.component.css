@@ -1,78 +1,13 @@
-.navbar{
-    background: #fff;
-    border: 0;
+.mt-login{
+  background-color: #ededed;
+  padding-bottom: 80px;
+  margin-top: 10px;
+  padding-top: 60px;
+  border-top: 1px solid #d6d5da;
 }
 
-#navbar{
-    display: table;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 0 !important;
-    height: 50px;
-}
-
-#navbar li{
-    margin-left: 10px !important;
-    margin-right:10px !important;
-}
-.navbar li a{
-    color: #262319;
-    text-transform: uppercase;
-    font-size: 22px;
-    height: 35px;
-    background: #fff;
-    padding-left: 1px;
-    padding-right: 1px;
-    margin-left: 1px !important;
-    margin-right:1px !important;
-    border: 0px solid red;
-    cursor: pointer;
-    font-family: 'Open Sans Condensed', sans-serif;
-    
-    
-}
-
-.wBorder{
-    border-bottom: 3px solid #ef5c6e;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left:  0px;
-    margin-right: 0px;
-
-    
-}
-
-.nBorder{
-    border-bottom: 0px solid black;
-}
-
-/*nav anim*/
-
-.mtAnim:after{
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 0;
-  height: 3px;
-  background-color: #ef5c6e;
-  content: "";
-  transition: width 0.2s;
-}
-
-.mtAnim:hover{
-  color: #ef5c6e;
-}
-
-.mtAnim:hover:after {
-  width: 100%;
-}
-
-.mt-loginOpen{
-    display: block;
-    border: 0px solid;
-    background-color: #3B3E19;
+.mt-login-form{
+    margin-top: 80px;
 }
 
 form {
@@ -97,8 +32,8 @@ label .mt-contato-form-label-text{
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-   color: #fff;
-cursor: text;
+  color: #333333;
+   cursor: text;
 
 }
 
@@ -106,7 +41,7 @@ cursor: text;
 label input{
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid #EFCEA2;
+  border-bottom: 2px solid rgba(59,62,25, .6);
   color: #C09A73;
   font-size: 34px;
   letter-spacing: -1px;
@@ -147,8 +82,7 @@ button{
   color: #F2E4CA;
   cursor: pointer;
   font-size: 20px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 50px;
   padding: 15px 30px;
   text-transform: uppercase;
   transition: all 200ms;

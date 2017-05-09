@@ -18,11 +18,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { PortfolioAddComponent } from './components/portfolio-add/portfolio-add.component';
 import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
 import { PortfolioEditComponent } from './components/portfolio-edit/portfolio-edit.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'works', component: PortfolioComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'works/new', component: PortfolioAddComponent},
   {path: 'work/:slug', component: PortfolioDetailsComponent},
   {path: 'work/edit/:id', component: PortfolioEditComponent}
@@ -49,6 +51,7 @@ export const firebaseConfig = {
     PortfolioAddComponent,
     PortfolioDetailsComponent,
     PortfolioEditComponent,
+    LoginComponent,
 
   ],
   imports: [

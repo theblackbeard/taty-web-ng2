@@ -1,10 +1,29 @@
-<p>
-  portfolio works!
-</p>
 
+<section class="mt-works">
+  <div class="container">
+      <div class="mt-header mt-header-2 barra">
+        <h1>Portfólio</h1>
+      </div>
+          <div class="row">
+            
+            <div class="col-lg-6 box1" *ngFor="let work of works">
+               <article class="mt-article">
+                  <div class="thumbnail">
+                    <ul>
+                      <li><a href="#">#Living</a></li>
+                      <li><a href="#">#Sketchup</a></li>
+                        <li><a href="#">#Vray</a></li>
+                      
+                    </ul>
+                    <h1>{{work.title}}</h1>
+                      <a [routerLink]="['/work/'+work.slug]" id="mt-article-cover"><img src="../../assets/imgs/b.jpg"></a>
+                  </div>
+                 </article> 
+            </div>
+          
+         
+          </div>
+      
+  </div>
+</section>  
 
-<a [routerLink]="['new']">Novo Trabalho</a>
-<ul>
-  <li *ngFor="let work of works" ><a [routerLink]="['/work/'+work.slug]">{{work.slug}}</a></li>
-
-</ul>  

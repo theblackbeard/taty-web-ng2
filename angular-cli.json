@@ -18,9 +18,20 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
+        "./assets/css/bootstrap.min.css",
+        "./assets/css/lightbox.min.css",
+        "./assets/css/font-awesome.min.css", 
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/js/jquery.min.js",
+        "./assets/js/bootstrap.min.js",
+        "./assets/js/lightbox.min.js",
+        "./assets/js/imagesloaded.min.js",
+        "./assets/js/masonry.min.js",
+        "./assets/js/scripts.js"
+        
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

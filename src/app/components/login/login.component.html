@@ -1,19 +1,10 @@
- <nav class="navbar navbar-inverse">
-      
-        <div id="navbar">
-          <ul class="nav navbar-nav ">
-            <li id="menu"><a [routerLink]="['/']" class="mtAnim">Home</a></li>
-            <li id="menu"><a [routerLink]="['/works']" class="mtAnim">Portfólio</a></li>
-            <li id="menu" *ngIf="!(user | async)"><a (click)="openLogin()">Login</a></li>
-            <li id="menu" *ngIf="(user | async)"><a (click)="logout()" class="mtAnim">Sair</a></li>
-         
-          </ul>
+<section class="mt-login">
+     <div class="container">
+        <div class="mt-header mt-header-2 barra">
+          <h1>Login</h1>
         </div>
- 
-    </nav>
-    <div class="mt-loginOpen" *ngIf="isloginFormOpen">
-               <div class="row mt-login-form">
-          <form id="submitLogin" (submit)="login()">
+        <div class="row mt-login-form">
+          <form id="submitLogin" (submit)="onSubmitLogin()">
             <div class="col-lg-6 col-lg-offset-3">
                 <label>
                   <input type="text" id="email" name="email" [(ngModel)]="email" required>
@@ -29,5 +20,5 @@
                
           </form>
         </div> 
-
-    </div>
+     </div>  
+</section>

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { WorksService } from '../../services/works.service';
 import { Router, ActivatedRoute, Params} from '@angular/router';
-
+import { Observable } from 'rxjs/Observable';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase'; 
 
 @Component({
   selector: 'app-portfolio-details',
@@ -11,13 +13,19 @@ import { Router, ActivatedRoute, Params} from '@angular/router';
 export class PortfolioDetailsComponent implements OnInit {
   slug: any;
   work: any;
+  user: Observable<firebase.User>;
+
   
   constructor(
     private ws: WorksService,
     private router: Router,
-    private route: ActivatedRoute 
+    private route: ActivatedRoute, 
+    private auth: AngularFireAuth
 
-  ) { }
+  ) {
+
+    this.user = auth.authState;
+   }
 
   ngOnInit() {
       this.slug = this.route.snapshot.params['slug'];
@@ -26,9 +34,10 @@ export class PortfolioDetailsComponent implements OnInit {
       })
   }
 
-  onDelete(){
-   this.ws.removeWork(this.work[0].$key);
-   this.router.navigate(['/works']);
+
+  deteleThis(){
+    this.ws.removeWork(this.work[0].$key);
+      this.router.navigate(['/works']);
   }
 
 }

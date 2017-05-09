@@ -22,9 +22,9 @@
                beforeSend: function(){
                    $("#mt-wait").show();
                    $('html, body').animate({scrollTop: ( $("#mt-top").offset().top )}, 500);
-                   $('.modal').css({'display': 'block'});
+                   $('.mt-modal').css({'display': 'block'});
                  },
-               complete: function(){$("#mt-wait").fadeOut('slow');  $('.modal').css({'display': 'none'});},
+               complete: function(){$("#mt-wait").fadeOut('slow');  $('.mt-modal').css({'display': 'none'});},
                data: query,
                dataType: "json",
            }).
@@ -38,7 +38,6 @@
       
 
     })
-
 
    // init Masonry
    var $grid = $('.grid').masonry({
